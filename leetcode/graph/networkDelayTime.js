@@ -18,32 +18,32 @@ var networkDelayTime = function(times, n, k) {
     dist[k] = 0;
 
     // Dijkstra's algorithm with priority queue (inefficient implementation)
-    // const pq = [[k, 0]]
+    const pq = [[k, 0]]
 
-    // while(pq.length) {
-    //     pq.sort((a, b) => a[1] - b[1])
-    //     const [node, currDist] = pq.shift();
+    while(pq.length) {
+        pq.sort((a, b) => a[1] - b[1])
+        const [node, currDist] = pq.shift();
 
-    //     if (currDist > dist[node]) continue;
+        if (currDist > dist[node]) continue;
 
-    //     for (let [neighbor, weight] of graph[node]) {
-    //         const newDist = currDist + weight;
+        for (let [neighbor, weight] of graph[node]) {
+            const newDist = currDist + weight;
 
-    //         if (newDist < dist[neighbor]) {
-    //             dist[neighbor] = newDist;
-    //             pq.push([neighbor, newDist]);
-    //         }
-    //     }
-    // }
-
-    // Brute force Bellman-Ford algorithm
-    for (let i = 1; i <= n - 1; i++) {
-        for (let [u, v, w] of times) {
-            if (dist[u] !== Infinity && dist[u] + w < dist[v]) {
-                dist[v] = dist[u] + w;
+            if (newDist < dist[neighbor]) {
+                dist[neighbor] = newDist;
+                pq.push([neighbor, newDist]);
             }
         }
     }
+
+    // Brute force Bellman-Ford algorithm
+    // for (let i = 1; i <= n - 1; i++) {
+    //     for (let [u, v, w] of times) {
+    //         if (dist[u] !== Infinity && dist[u] + w < dist[v]) {
+    //             dist[v] = dist[u] + w;
+    //         }
+    //     }
+    // }
 
     let maxTime = 0;
     for (let i = 1; i <= n; i++) {
