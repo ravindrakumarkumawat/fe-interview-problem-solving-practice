@@ -1,7 +1,7 @@
 /**
  * 299. Bulls and Cows
  * https://leetcode.com/problems/bulls-and-cows/?envType=problem-list-v2&envId=hash-table
- * @param {string} secret
+ * @param {string} secret 
  * @param {string} guess
  * @return {string}
  */
