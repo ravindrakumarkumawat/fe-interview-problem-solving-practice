@@ -9,7 +9,7 @@ var subsets = function(nums) {
     for (let num of nums) {
         let n = outer.length;
         for (let i = 0; i < n; i++) {
-            let internal = outer[i].slice(); // Copy existing subset
+            let internal = outer[i].slice();
             internal.push(num);
             outer.push(internal);
         }
