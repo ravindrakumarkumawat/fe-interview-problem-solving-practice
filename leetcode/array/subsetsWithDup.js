@@ -2,7 +2,7 @@
  * 90. Subsets II
  * https://leetcode.com/problems/subsets-ii/description/?envType=problem-list-v2&envId=array
  * @param {number[]} nums
- * @return {number[][]}
+ * @return {number[][]} 
  */
 var subsetsWithDup = function(nums) {
     nums.sort((a, b) => a- b)
