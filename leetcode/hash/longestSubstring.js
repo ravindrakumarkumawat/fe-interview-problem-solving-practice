@@ -18,6 +18,7 @@ var longestSubstring = function(s, k) {
                 return Math.max(left, right);
             }
         }
+        
         return str.length;
     };
 
