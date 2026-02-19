@@ -37,3 +37,6 @@ var snakesAndLadders = function(board) {
 
     return -1;
 };
+
+// Time complexity: O(n^2) - Each cell is processed at most once
+// Space complexity: O(n^2) - The visited array and queue can grow up to n^2 in size
