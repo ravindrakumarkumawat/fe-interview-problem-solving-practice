@@ -4,7 +4,7 @@
  * @param {number[]} nums1
  * @param {number} m
  * @param {number[]} nums2
- * @param {number} n 
+ * @param {number} n
  * @return {void} Do not return anything, modify nums1 in-place instead.
  */
 
