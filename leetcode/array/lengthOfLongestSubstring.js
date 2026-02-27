@@ -21,3 +21,6 @@ var lengthOfLongestSubstring = function(s) {
 
     return maxLength;    
 }
+
+// TC: O(n)
+// SC: O(n)
