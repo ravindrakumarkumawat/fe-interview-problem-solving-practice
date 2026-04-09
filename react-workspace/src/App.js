@@ -1,7 +1,19 @@
-import { ClickAnywhere, CounterMemozied, Cycle, EffectOnce, FocusInput, PreviousState, StateWithReset } from './components/examples';
-import { MortgageCalculator } from './components';
+import { 
+  ClickAnywhere,
+  CounterMemozied,
+  Cycle,
+  EffectOnce,
+  FocusInput,
+  PreviousState,
+  StateWithReset
+} from './components/examples';
+import {
+  MortgageCalculator,
+  UserList,
+  Tweets,
+  Autocomplete
+} from './components';
 import './App.css';
-import Tweets from './components/Tweets';
 
 function App() {
   return (
@@ -21,6 +33,12 @@ function App() {
       <div className="user-interface-coding-examples">
         <MortgageCalculator />
         <Tweets />
+      </div>
+
+      <h2>Components</h2>
+      <div className="components-examples">
+        <UserList />
+        <Autocomplete />
       </div>
     </div>
   );
